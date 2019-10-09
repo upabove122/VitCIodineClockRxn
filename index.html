@@ -4,18 +4,21 @@
         <!-- Plotly.js -->
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
+    <style>
+        .smallinput {
+          width: 10%;
+        }
+    </style>
     <body>
-        <div>
-        <form>
-            n:
-            <input type="number" id="n" onchange="buttonpress()">
-            Delta t:
-            <input type="number" id="dt" onchange="buttonpress()">
-            Ao:<input type="number" id="ao" onchange="buttonpress()">
-            Bo:<input type="number" id="bo" onchange="buttonpress()">
-            Co:<input type="number" id="co" onchange="buttonpress()">
-            K0:<input type="number" id="k0" onchange="buttonpress()">
-            K1:<input type="number" id="k1" onchange="buttonpress()">
+        <div style="width:100%;">
+        <form style="width:100%;">
+            n:<input style="width: 10%" type="number" id="n" onchange="buttonpress()">
+            Delta t:<input style="width: 10%"type="number" id="dt" onchange="buttonpress()">
+            Ao:<input class="smallinput" type="number" id="ao" onchange="buttonpress()">
+            Bo:<input class="smallinput" type="number" id="bo" onchange="buttonpress()">
+            Co:<input class="smallinput" type="number" id="co" onchange="buttonpress()">
+            K0:<input class="smallinput" type="number" id="k0" onchange="buttonpress()">
+            K1:<input class="smallinput" type="number" id="k1" onchange="buttonpress()">
             <br>
             Anything typed above will be dynamically changed once clicked away/enter is pressed
         </form>
