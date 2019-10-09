@@ -11,6 +11,11 @@ if (confirm('Please run this on a browser without any important tabs, as placing
 } else {
     document.getElementById('n').style.display = 'none';
     document.getElementById('dt').style.display = 'none';
+    document.getElementById('ao').style.display = 'none';
+    document.getElementById('bo').style.display = 'none';
+    document.getElementById('co').style.display = 'none';
+    document.getElementById('k0').style.display = 'none';
+    document.getElementById('k1').style.display = 'none';
 }
 
 var i,
