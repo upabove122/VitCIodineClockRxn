@@ -5,6 +5,16 @@
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
     <body>
+        <div>
+        <form>
+            n:
+            <input type="number" id="n" onchange="buttonpress()">
+            Delta t:
+            <input type="number" id="dt" onchange="buttonpress()">
+            <br>
+            Anything typed above will be dynamically changed once clicked away/enter is pressed
+        </form>
+        </div>
         <div id="myDiv"></div>
         <script src="plot.js"></script>
     </body>
