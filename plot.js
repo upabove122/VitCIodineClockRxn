@@ -1,7 +1,12 @@
 if (confirm('Please run this on a browser without any important tabs, as placing in crazy n values will crash the browser! Cancle to stop any processing')) {
-    CalculateXY(0.005, 1, 0, 1.5, 0.02, 20, 100000);
     document.getElementById('n').value = 100000;
-    document.getElementById('dt').value = 0.005;      
+    document.getElementById('dt').value = 0.005;
+    document.getElementById('ao').value = 1;
+    document.getElementById('bo').value = 0;
+    document.getElementById('co').value = 1.5;
+    document.getElementById('k0').value = 0.02;
+    document.getElementById('k1').value = 20;
+    buttonpress();
     Plotly.newPlot('myDiv', data, {});
 } else {
     document.getElementById('n').style.display = 'none';
@@ -18,13 +23,18 @@ var i,
 function buttonpress() {
     'use strict';
     var newdt = Number(document.getElementById('dt').value),
-        newn = Number(document.getElementById('n').value);
+        newn = Number(document.getElementById('n').value),
+        newao = Number(document.getElementById('ao').value),
+        newbo = Number(document.getElementById('bo').value),
+        newco = Number(document.getElementById('co').value),
+        newk0 = Number(document.getElementById('k0').value),
+        newk1 = Number(document.getElementById('k1').value);
     if (newn > 100000) {
         if (confirm('Are you sure you want to proceed? n number is very large, it may take some time to calculate!')) {
-            CalculateXY(newdt, 1, 0, 1.5, 0.02, 20, newn);
+            CalculateXY(newdt, newao, newbo, newco, newk0, newk1, newn);
         }
     } else {
-        CalculateXY(newdt, 1, 0, 1.5, 0.02, 20, newn);
+        CalculateXY(newdt, newao, newbo, newco, newk0, newk1, newn);
     }
 }
 
