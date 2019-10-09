@@ -1,4 +1,4 @@
-if (confirm('Please run this on a browser without any important tabs, as placing in crazy n values will crash the browser! Cancle to stop any processing')) {
+if (confirm('Please run this on a browser without any important tabs, as placing in crazy n values will crash the browser! Cancel to stop any processing')) {
     document.getElementById('n').value = 100000;
     document.getElementById('dt').value = 0.005;
     document.getElementById('ao').value = 1;
